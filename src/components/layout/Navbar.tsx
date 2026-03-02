@@ -45,7 +45,7 @@ const productDropdown: DropdownCategory[] = [
     },
     {
         category: "Raised Floor Accessories",
-        href: "/products#accessories",
+        href: "/products/accessories",
         items: [
             { name: "Grating Panel", href: "/products/accessories/grating-panel" },
             { name: "Perforated Panel", href: "/products/accessories/perforated-panel" },
