@@ -1,21 +1,23 @@
 import { AboutHero } from "@/components/sections/about/AboutHero";
 import { CompanyOverview } from "@/components/sections/about/CompanyOverview";
-import { MissionVision } from "@/components/sections/about/MissionVision";
-import { Certifications } from "@/components/sections/about/Certifications";
 import { Facilities } from "@/components/sections/about/Facilities";
-import { WhyChooseUs } from "@/components/sections/about/WhyChooseUs";
-import { Cta } from "@/components/sections/Cta";
+import { MissionVision } from "@/components/sections/about/MissionVision";
+import { WhyChooseDazzle } from "@/components/sections/about/WhyChooseDazzle";
+import { PolicyValues } from "@/components/sections/about/PolicyValues";
+import { Certifications } from "@/components/sections/about/Certifications";
+import { ContactCTA } from "@/components/contact/ContactCTA";
 
 export default function AboutPage() {
     return (
         <>
             <AboutHero />
             <CompanyOverview />
-            <MissionVision />
             <Facilities />
-            <WhyChooseUs />
+            <MissionVision />
+            <WhyChooseDazzle />
+            <PolicyValues />
             <Certifications />
-            <Cta />
+            <ContactCTA />
         </>
     );
 }

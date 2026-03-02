@@ -15,8 +15,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Dazzle Modular Systems | Industrial Operations Dashboard",
-  description: "Take control of your daily Operations. All your data, tools and people in one place. Streamline your workflow now.",
+  title: "Dazzle Modular Systems | Built for Infrastructure",
+  description: "Dazzle Modular Systems delivers innovative, dependable, and customer-focused raised floor systems.",
 };
 
 export default function RootLayout({

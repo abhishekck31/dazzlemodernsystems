@@ -1,25 +1,23 @@
-import { Hero } from "@/components/sections/Hero";
-import { TrustedLogos } from "@/components/sections/TrustedLogos";
-import { Features } from "@/components/sections/Features";
-import { Process } from "@/components/sections/Process";
-import { Automation } from "@/components/sections/Automation";
-import { Stats } from "@/components/sections/Stats";
-import { Pricing } from "@/components/sections/Pricing";
-import { Testimonials } from "@/components/sections/Testimonials";
-import { FAQ } from "@/components/sections/FAQ";
+import { Hero } from "@/components/home/Hero";
+import { Applications } from "@/components/home/Applications";
+import { AboutPreview } from "@/components/home/AboutPreview";
+import { ProductsGrid } from "@/components/home/ProductsGrid";
+import { VisionMission } from "@/components/home/VisionMission";
+import { Testimonials } from "@/components/home/Testimonials";
+import { Clients } from "@/components/home/Clients";
+import { ContactCTA } from "@/components/contact/ContactCTA";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <TrustedLogos />
-      <Features />
-      <Process />
-      <Automation />
-      <Stats />
-      <Pricing />
+      <Applications />
+      <AboutPreview />
+      <ProductsGrid />
+      <VisionMission />
       <Testimonials />
-      <FAQ />
+      <Clients />
+      <ContactCTA />
     </>
   );
 }
