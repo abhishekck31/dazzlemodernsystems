@@ -15,7 +15,7 @@ export default function SteelCementitiousPage() {
         <main className="min-h-screen bg-white">
             {/* 1. Hero Section */}
             <ProductHero
-                title="Steel Cementitious Raised Access Flooring"
+                title="Products"
                 breadcrumbs={[
                     { name: "Home", href: "/" },
                     { name: "Products", href: "/products" },
@@ -40,14 +40,14 @@ export default function SteelCementitiousPage() {
                             title="Standard Bare Panels"
                             description="Epoxy-coated unitized steel shell consisting of a flat steel top sheet welded to a formed bottom sheet, filled with proprietary lightweight cementitious core. Manufactured to exact tolerances for maximum strength and durability."
                             imageUrl="/products/bare-panel.jpg"
-                            linkUrl="/contact"
+                            linkUrl="/products/steel-cementitious/standard-bare-panels"
                         />
                         <ProductCard
                             index={1}
                             title="Anti-Static High Pressure Laminate & PVC Panels"
                             description="Steel cementitious core panels with anti-static HPL or PVC finish, providing enhanced electrostatic control for sensitive environments such as data centers and IT facilities."
                             imageUrl="/products/hpl-panel.jpg"
-                            linkUrl="/contact"
+                            linkUrl="/products/steel-cementitious/anti-static-panels"
                         />
                     </div>
                 </div>
