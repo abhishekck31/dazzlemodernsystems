@@ -22,7 +22,7 @@ export default function StandardBarePanelsPage() {
             />
 
             {/* Overview Section */}
-            <section className="py-24 md:py-32 bg-white relative overflow-hidden">
+            <section className="py-24 md:py-24 bg-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-zinc-50 rounded-full blur-3xl opacity-50" />
 
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -46,7 +46,7 @@ export default function StandardBarePanelsPage() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="relative aspect-4/3 rounded-3xl overflow-hidden shadow-2xl bg-zinc-100 group"
+                            className="relative aspect-4/3 rounded-lg overflow-hidden shadow-2xl bg-zinc-100 group"
                         >
                             <div className="absolute inset-0 bg-gradient-to-tr from-black/10 to-transparent z-10" />
                             {/* Uses a placeholder colored block since we don't have the image file downloaded yet, maintaining aesthetic */}
@@ -72,7 +72,7 @@ export default function StandardBarePanelsPage() {
             />
 
             {/* Specifications Details Section */}
-            <section className="py-24 md:py-32 bg-zinc-50 border-y border-zinc-200">
+            <section className="py-24 md:py-24 bg-zinc-50 border-y border-zinc-200">
                 <div className="max-w-7xl mx-auto px-6">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -98,7 +98,7 @@ export default function StandardBarePanelsPage() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.1 }}
-                            className="lg:col-span-4 flex flex-col gap-8 bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-zinc-100"
+                            className="lg:col-span-4 flex flex-col gap-8 bg-white p-8 md:p-10 rounded-lg shadow-sm border border-zinc-100"
                         >
                             <h3 className="text-xl font-bold text-zinc-900 border-b border-zinc-100 pb-4">Standard Info</h3>
                             <ul className="flex flex-col gap-6">
@@ -127,7 +127,7 @@ export default function StandardBarePanelsPage() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.2 }}
-                            className="lg:col-span-8 bg-white rounded-3xl shadow-sm border border-zinc-100 overflow-hidden"
+                            className="lg:col-span-8 bg-white rounded-lg shadow-sm border border-zinc-100 overflow-hidden"
                         >
                             <div className="overflow-x-auto">
                                 <table className="w-full text-left border-collapse min-w-[600px]">

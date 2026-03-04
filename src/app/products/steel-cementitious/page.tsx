@@ -25,14 +25,14 @@ export default function SteelCementitiousPage() {
             />
 
             {/* 2. Product Category Introduction */}
-            <section className="py-24 md:py-32 bg-white">
-                <div className="max-w-4xl mx-auto px-6 text-center text-xl md:text-2xl text-zinc-600 leading-relaxed md:leading-snug font-light">
+            <section className="py-24 md:py-24 bg-white">
+                <div className="max-w-4xl mx-auto px-6 text-center text-[16px] md:text-[18px] text-zinc-600 leading-relaxed md:leading-snug font-light">
                     Steel cementitious raised access panels are engineered for superior strength, durability, and non-combustible performance. Designed for mission-critical environments such as data centers and corporate infrastructure, these panels offer structural reliability with lightweight efficiency.
                 </div>
             </section>
 
             {/* 3. Product Cards Section */}
-            <section className="py-24 md:py-32 bg-zinc-50 border-t border-zinc-200 relative">
+            <section className="py-24 md:py-24 bg-zinc-50 border-t border-zinc-200 relative">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-stretch">
                         <ProductCard
