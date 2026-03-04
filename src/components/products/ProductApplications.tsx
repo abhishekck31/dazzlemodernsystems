@@ -3,9 +3,11 @@
 import { motion } from "framer-motion";
 import { LucideIcon } from "lucide-react";
 
+import { ReactNode } from "react";
+
 interface Application {
     title: string;
-    icon: LucideIcon;
+    icon: ReactNode;
 }
 
 interface ProductApplicationsProps {
@@ -29,7 +31,6 @@ export function ProductApplications({ applications }: ProductApplicationsProps) 
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
                     {applications.map((app, index) => {
-                        const Icon = app.icon;
                         return (
                             <motion.div
                                 key={app.title}
@@ -37,10 +38,12 @@ export function ProductApplications({ applications }: ProductApplicationsProps) 
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                                className="flex flex-col items-center justify-center gap-5 p-8 md:p-10 rounded-2xl bg-white border border-zinc-200 shadow-sm hover:shadow-md transition-shadow"
+                                className="flex flex-col items-center justify-center gap-5 p-8 md:p-10 rounded-lg bg-white border border-border shadow-sm hover:shadow-md transition-shadow"
                             >
-                                <Icon size={36} className="text-zinc-400" strokeWidth={1.5} />
-                                <span className="font-semibold text-zinc-900 text-center text-sm md:text-base tracking-wide">{app.title}</span>
+                                <div className="text-slate-400">
+                                    {app.icon}
+                                </div>
+                                <span className="font-semibold text-foreground text-center text-sm md:text-base tracking-wide">{app.title}</span>
                             </motion.div>
                         );
                     })}
