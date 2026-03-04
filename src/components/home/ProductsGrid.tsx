@@ -20,16 +20,16 @@ const products = [
 
 export function ProductsGrid() {
     return (
-        <section className="py-32 bg-[#fdfdfd]" id="products-grid">
+        <section className="py-20 md:py-24 bg-muted" id="products-grid">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
-                <MotionWrapper variants={fadeUp} className="text-center mb-20">
-                    <span className="inline-block py-1.5 px-4 rounded-full border border-gray-200 text-[11px] font-bold text-gray-500 tracking-widest uppercase mb-5 shadow-sm">
+                <MotionWrapper variants={fadeUp} className="text-center mb-16">
+                    <span className="inline-block py-1.5 px-4 rounded border border-slate-200 text-[12px] font-bold text-slate-500 tracking-widest uppercase mb-6 shadow-sm bg-white">
                         Products Overview
                     </span>
-                    <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 leading-tight mb-4">
+                    <h2 className="text-3xl md:text-[40px] font-bold tracking-tight text-foreground leading-[1.2] mb-6">
                         Our Product Range
                     </h2>
-                    <p className="text-[17px] text-gray-500 font-medium leading-[1.8] max-w-2xl mx-auto">
+                    <p className="text-[16px] md:text-[18px] text-slate-500 font-medium leading-[1.7] max-w-[65ch] mx-auto">
                         Premium raised access floor systems and accessories engineered for structural performance and seamless integration.
                     </p>
                 </MotionWrapper>
@@ -39,17 +39,17 @@ export function ProductsGrid() {
                         <MotionWrapper
                             key={i}
                             variants={fadeUp}
-                            className="group flex flex-col bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden"
+                            className="group flex flex-col bg-card rounded-lg p-8 border border-border shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-700 relative overflow-hidden h-full"
                         >
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-brand-500/5 rounded-full blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
-                            <h3 className="text-[20px] font-bold text-gray-900 mb-3 tracking-tight z-10">{product.title}</h3>
-                            <p className="text-[14px] text-gray-500 font-medium leading-relaxed mb-10 flex-1 z-10">
+                            <h3 className="text-[22px] font-bold text-card-foreground mb-4 tracking-tight z-10 leading-[1.3]">{product.title}</h3>
+                            <p className="text-[16px] text-muted-foreground font-medium leading-[1.6] mb-10 flex-1 z-10 max-w-[65ch]">
                                 {product.desc}
                             </p>
 
-                            <div className="mt-auto group-hover:translate-x-1 transition-transform duration-300">
-                                <button className="inline-flex items-center gap-2 text-blue-600 font-bold text-[13px] tracking-wide uppercase z-10">
+                            <div className="mt-auto group-hover:translate-x-1 transition-transform duration-700">
+                                <button className="inline-flex items-center gap-2 text-brand-600 font-bold text-[13px] tracking-wide uppercase z-10">
                                     View Details
                                     <ArrowRight className="w-4 h-4" />
                                 </button>

@@ -22,8 +22,8 @@ export function BlogCard({ post, isFeatured = false }: BlogCardProps) {
     return (
         <MotionWrapper variants={fadeUp} className="group relative">
             <Link href={`/blog/${post.id}`} className="block">
-                <div className={`relative mb-6 rounded-2xl overflow-hidden bg-gray-100 ${isFeatured ? 'h-[240px] md:h-[300px]' : 'h-[200px] md:h-[220px]'} border border-gray-200 shadow-sm transition-all duration-500 group-hover:shadow-lg`}>
-                    <div className="absolute inset-0 bg-gray-900/10 group-hover:bg-gray-900/0 transition-colors duration-300 z-10" />
+                <div className={`relative mb-6 rounded-2xl overflow-hidden bg-slate-100 ${isFeatured ? 'h-[240px] md:h-[300px]' : 'h-[200px] md:h-[220px]'} border border-border shadow-sm transition-all duration-500 group-hover:shadow-lg`}>
+                    <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/0 transition-colors duration-300 z-10" />
 
                     {post.featured && (
                         <div className="absolute top-4 left-4 z-20 px-3 py-1 bg-[#111] text-white text-[10px] font-bold uppercase tracking-widest rounded-full shadow-md backdrop-blur-md">
@@ -43,8 +43,8 @@ export function BlogCard({ post, isFeatured = false }: BlogCardProps) {
                     />
                 </div>
 
-                <p className="text-[12px] font-bold text-gray-400 mb-3 tracking-wide">{post.date}</p>
-                <h3 className="text-[19px] md:text-[21px] font-bold text-gray-900 leading-[1.3] group-hover:text-blue-600 transition-colors">
+                <p className="text-[12px] font-bold text-slate-400 mb-3 tracking-wide">{post.date}</p>
+                <h3 className="text-[19px] md:text-[21px] font-bold text-foreground leading-[1.3] group-hover:text-brand-600 transition-colors">
                     {post.title}
                 </h3>
             </Link>

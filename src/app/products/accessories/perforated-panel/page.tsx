@@ -58,12 +58,12 @@ export default function PerforatedPanelPage() {
             {/* Features Highlight */}
             <TechnicalHighlights
                 highlights={[
-                    { title: "26% open surface area", icon: Wind },
-                    { title: "Load ratings equal to standard panels", icon: ArrowUpToLine },
-                    { title: "40-micron epoxy coated", icon: Layers },
-                    { title: "Resistance welded at approx 100 locations", icon: Settings },
-                    { title: "Oval arrangement of small holes", icon: CheckCircle2 },
-                    { title: "Optional volume control dampers", icon: SlidersHorizontal },
+                    { title: "26% open surface area", icon: <Wind size={24} /> },
+                    { title: "Load ratings equal to standard panels", icon: <ArrowUpToLine size={24} /> },
+                    { title: "40-micron epoxy coated", icon: <Layers size={24} /> },
+                    { title: "Resistance welded at approx 100 locations", icon: <Settings size={24} /> },
+                    { title: "Oval arrangement of small holes", icon: <CheckCircle2 size={24} /> },
+                    { title: "Optional volume control dampers", icon: <SlidersHorizontal size={24} /> },
                 ]}
             />
 

@@ -12,7 +12,7 @@ interface ProductCTAProps {
 
 export function ProductCTA({ heading, buttonText, buttonLink }: ProductCTAProps) {
     return (
-        <section className="py-32 relative overflow-hidden bg-[#0a0b0d]">
+        <section className="py-24 relative overflow-hidden bg-slate-900">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.05),transparent_50%)]" />
 
             <div className="relative max-w-4xl mx-auto px-6 text-center z-10">
@@ -21,7 +21,7 @@ export function ProductCTA({ heading, buttonText, buttonLink }: ProductCTAProps)
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-10 leading-tight"
+                    className="text-3xl md:text-[40px] font-bold text-white tracking-tight mb-10 leading-tight"
                 >
                     {heading}
                 </motion.h2>

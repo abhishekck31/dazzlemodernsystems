@@ -97,19 +97,19 @@ export function Navbar() {
         >
             <div
                 className={cn(
-                    "w-full max-w-7xl mx-auto px-6 h-16 flex items-center justify-between rounded-full transition-all duration-500",
+                    "w-full max-w-7xl mx-auto px-8 h-16 flex items-center justify-between rounded transition-all duration-500",
                     scrolled
-                        ? "bg-[#0a0b0d]/90 backdrop-blur-md shadow-[0_8px_30px_rgb(0,0,0,0.4)] border border-white/10 text-white"
-                        : "bg-black/20 border border-white/5 backdrop-blur-md text-white shadow-[0_8px_30px_rgb(0,0,0,0.1)]"
+                        ? "bg-slate-900/90 backdrop-blur-md shadow-[0_8px_30px_rgb(0,0,0,0.4)] border border-slate-700/50 text-white"
+                        : "bg-slate-900/90 border border-slate-700/50 backdrop-blur-md text-white shadow-[0_8px_30px_rgb(0,0,0,0.1)]"
                 )}
             >
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-3 group relative z-10 shrink-0">
-                    <div className="w-8 h-8 rounded bg-gradient-to-br from-zinc-800 to-black flex items-center justify-center border border-zinc-700 shadow-inner">
+                    <div className="w-8 h-8 rounded bg-brand-600 flex items-center justify-center border border-brand-500 shadow-inner">
                         <svg
                             viewBox="0 0 24 24"
                             fill="none"
-                            className="w-4 h-4 text-zinc-300 group-hover:text-white transition-colors"
+                            className="w-5 h-5 text-white group-hover:scale-105 transition-transform"
                             stroke="currentColor"
                             strokeWidth="2"
                             strokeLinecap="round"
@@ -139,8 +139,8 @@ export function Navbar() {
                                     <Link
                                         href={link.href}
                                         className={cn(
-                                            "relative px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.15em] transition-colors duration-300 rounded-full flex items-center gap-1.5",
-                                            isActive || desktopProductsOpen ? "text-white" : "text-zinc-400 hover:text-white"
+                                            "relative px-5 py-2.5 text-[12px] font-semibold uppercase tracking-[0.1em] transition-colors duration-300 rounded flex items-center gap-1.5",
+                                            isActive || desktopProductsOpen ? "text-white" : "text-slate-300 hover:text-white"
                                         )}
                                     >
                                         <span className="relative z-10">{link.name}</span>
@@ -148,7 +148,7 @@ export function Navbar() {
                                         {activeHover === link.name && (
                                             <motion.div
                                                 layoutId="navbar-hover-bg"
-                                                className="absolute inset-0 rounded-full bg-white/10"
+                                                className="absolute inset-0 rounded bg-brand-500/10 border border-brand-500/20"
                                                 initial={{ opacity: 0 }}
                                                 animate={{ opacity: 1 }}
                                                 exit={{ opacity: 0 }}
@@ -158,7 +158,7 @@ export function Navbar() {
                                         {isActive && (
                                             <motion.div
                                                 layoutId="navbar-active-indicator"
-                                                className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                                                className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-[2px] bg-brand-500 shadow-[0_0_8px_rgba(0,119,182,0.6)]"
                                                 transition={{ type: "spring", stiffness: 400, damping: 30 }}
                                             />
                                         )}
@@ -174,7 +174,7 @@ export function Navbar() {
                                                 transition={{ duration: 0.2, ease: "easeOut" }}
                                                 className="absolute top-full pt-6 left-1/2 -translate-x-1/2 w-[650px]"
                                             >
-                                                <div className="bg-[#0a0b0d]/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl p-8 grid grid-cols-2 gap-12 overflow-hidden relative">
+                                                <div className="bg-slate-900/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl p-8 grid grid-cols-2 gap-12 overflow-hidden relative">
                                                     <div className="absolute inset-0 bg-gradient-to-b from-white/[0.03] to-transparent pointer-events-none" />
 
                                                     {/* Column 1 */}
@@ -231,15 +231,15 @@ export function Navbar() {
                                 onMouseEnter={() => setActiveHover(link.name)}
                                 onMouseLeave={() => setActiveHover("")}
                                 className={cn(
-                                    "relative px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.15em] transition-colors duration-300 rounded-full",
-                                    isActive ? "text-white" : "text-zinc-400 hover:text-white"
+                                    "relative px-5 py-2.5 text-[12px] font-semibold uppercase tracking-[0.1em] transition-colors duration-300 rounded flex items-center gap-1.5",
+                                    isActive ? "text-white" : "text-slate-300 hover:text-white"
                                 )}
                             >
                                 <span className="relative z-10">{link.name}</span>
                                 {activeHover === link.name && (
                                     <motion.div
                                         layoutId="navbar-hover-bg"
-                                        className="absolute inset-0 rounded-full bg-white/10"
+                                        className="absolute inset-0 rounded bg-brand-500/10 border border-brand-500/20"
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
                                         exit={{ opacity: 0 }}
@@ -249,7 +249,7 @@ export function Navbar() {
                                 {isActive && (
                                     <motion.div
                                         layoutId="navbar-active-indicator"
-                                        className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                                        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-[2px] bg-brand-500 shadow-[0_0_8px_rgba(0,119,182,0.6)]"
                                         transition={{ type: "spring", stiffness: 400, damping: 30 }}
                                     />
                                 )}
@@ -286,7 +286,7 @@ export function Navbar() {
                             animate={{ x: 0 }}
                             exit={{ x: "100%" }}
                             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                            className="fixed top-0 right-0 bottom-0 w-[300px] bg-[#0a0b0d] border-l border-white/5 z-[60] md:hidden flex flex-col shadow-2xl"
+                            className="fixed top-0 right-0 bottom-0 w-[300px] bg-slate-900 border-l border-white/5 z-[60] md:hidden flex flex-col shadow-2xl"
                         >
                             <div className="flex items-center justify-between p-6 border-b border-white/5 shrink-0">
                                 <span className="font-bold text-sm tracking-[0.15em] text-zinc-100 uppercase">Menu</span>

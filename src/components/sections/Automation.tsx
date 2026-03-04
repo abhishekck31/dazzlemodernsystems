@@ -4,19 +4,19 @@ import { Cpu, Zap, Activity } from "lucide-react";
 
 export function Automation() {
     return (
-        <section className="relative py-32 overflow-hidden bg-black flex justify-center mt-12 mb-12 rounded-[40px] md:rounded-[60px] mx-4 lg:mx-8">
+        <section className="relative py-24 overflow-hidden bg-black flex justify-center mt-12 mb-12 rounded-xl md:rounded-xl mx-4 lg:mx-8">
             {/* Background Gradients & Glows */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#12071f] via-[#090b14] to-[#140b2e]" />
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950" />
 
             {/* Subtle floating background elements */}
             <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[120px] mix-blend-screen pointer-events-none" />
-            <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[150px] mix-blend-screen pointer-events-none" />
+            <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-brand-600/10 rounded-full blur-[150px] mix-blend-screen pointer-events-none" />
 
             <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-10 text-center">
 
                 <MotionWrapper variants={fadeUp} className="mb-6 flex justify-center">
                     <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-purple-500 to-indigo-500 p-[1px] shadow-[0_0_40px_rgba(168,85,247,0.4)]">
-                        <div className="w-full h-full bg-[#0a0f1d] rounded-2xl flex items-center justify-center">
+                        <div className="w-full h-full bg-slate-900 rounded-2xl flex items-center justify-center">
                             <Cpu className="w-8 h-8 text-purple-400" />
                         </div>
                     </div>
@@ -29,7 +29,7 @@ export function Automation() {
                     <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-white mb-6 leading-tight drop-shadow-lg">
                         Automation that <br className="hidden md:block" /> removes busywork.
                     </h2>
-                    <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto font-medium">
+                    <p className="text-lg md:text-xl text-slate-400 mb-12 max-w-[65ch] mx-auto font-medium">
                         Train custom AI agents to label, summarize, and route tasks instantly.
                         Free up your team to focus on what matters.
                     </p>
@@ -44,7 +44,7 @@ export function Automation() {
                             idx: "01",
                             title: "Smart Routing",
                             desc: "Automatically send tickets to the right department based on intent.",
-                            icon: <Activity className="w-5 h-5 text-blue-400" />
+                            icon: <Activity className="w-5 h-5 text-brand-400" />
                         },
                         {
                             idx: "02",
@@ -62,14 +62,14 @@ export function Automation() {
                         <MotionWrapper
                             key={i}
                             variants={fadeUp}
-                            className="bg-white/5 border border-white/10 p-8 rounded-3xl backdrop-blur-sm hover:bg-white/10 transition-colors"
+                            className="bg-white/5 border border-white/10 p-8 rounded-lg backdrop-blur-sm hover:bg-white/10 transition-colors"
                         >
                             <div className="flex items-center gap-3 mb-6">
-                                <span className="text-sm font-mono text-gray-500 bg-black/40 px-2 py-1 rounded-md">{feature.idx}</span>
+                                <span className="text-sm font-mono text-muted-foreground bg-black/40 px-2 py-1 rounded-md">{feature.idx}</span>
                                 {feature.icon}
                             </div>
                             <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                            <p className="text-gray-400 text-sm leading-relaxed">{feature.desc}</p>
+                            <p className="text-slate-400 text-sm leading-relaxed">{feature.desc}</p>
                         </MotionWrapper>
                     ))}
                 </MotionWrapper>

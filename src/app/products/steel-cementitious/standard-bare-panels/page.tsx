@@ -62,12 +62,12 @@ export default function StandardBarePanelsPage() {
             {/* Features Highlight */}
             <TechnicalHighlights
                 highlights={[
-                    { title: "Safe working load equals concentrated load", icon: ArrowUpToLine },
-                    { title: "Lightweight for ease of handling", icon: Zap },
-                    { title: "Excellent grounding & electrical continuity", icon: ShieldCheck },
-                    { title: "Full range of factory applied finishes", icon: Settings },
-                    { title: "Completely non-combustible", icon: Shield },
-                    { title: "Available in 24” and 60cm sizes", icon: LayoutGrid },
+                    { title: "Safe working load equals concentrated load", icon: <ArrowUpToLine size={24} /> },
+                    { title: "Lightweight for ease of handling", icon: <Zap size={24} /> },
+                    { title: "Excellent grounding & electrical continuity", icon: <ShieldCheck size={24} /> },
+                    { title: "Full range of factory applied finishes", icon: <Settings size={24} /> },
+                    { title: "Completely non-combustible", icon: <Shield size={24} /> },
+                    { title: "Available in 24” and 60cm sizes", icon: <LayoutGrid size={24} /> },
                 ]}
             />
 

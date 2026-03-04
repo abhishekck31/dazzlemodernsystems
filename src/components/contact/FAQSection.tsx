@@ -37,14 +37,14 @@ export function FAQSection() {
     };
 
     return (
-        <section className="py-24 bg-[#fdfdfd]">
+        <section className="py-24 bg-background">
             <div className="max-w-[720px] mx-auto px-6 lg:px-10">
 
                 <MotionWrapper variants={fadeUp} className="text-center mb-16">
-                    <span className="inline-block py-1.5 px-4 rounded-full border border-gray-200 text-[11px] font-bold text-gray-500 tracking-widest uppercase mb-6 shadow-sm">
+                    <span className="inline-block py-1.5 px-4 rounded-full border border-border text-[11px] font-bold text-muted-foreground tracking-widest uppercase mb-6 shadow-sm">
                         FAQS
                     </span>
-                    <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-gray-900 leading-tight">
+                    <h2 className="text-3xl md:text-[40px] font-bold tracking-tight text-foreground leading-tight">
                         Answers to <br className="hidden md:block" /> common questions
                     </h2>
                 </MotionWrapper>
@@ -61,8 +61,8 @@ export function FAQSection() {
                                 <button
                                     onClick={() => toggle(i)}
                                     className={`w-full text-left px-5 py-4 flex items-center justify-between font-bold text-[15px] transition-all duration-300 focus:outline-none ${isOpen
-                                            ? "bg-[#0a0a0a] text-white rounded-t-[10px] rounded-b-none"
-                                            : "bg-white text-gray-900 border border-gray-100 rounded-[10px] hover:border-gray-200 shadow-sm hover:shadow-md"
+                                            ? "bg-slate-900 text-white rounded-t-[10px] rounded-b-none"
+                                            : "bg-white text-foreground border border-border rounded-[10px] hover:border-border shadow-sm hover:shadow-md"
                                         }`}
                                 >
                                     <span className="pr-4">{faq.question}</span>
@@ -72,7 +72,7 @@ export function FAQSection() {
                                             <X className="w-3.5 h-3.5 text-white" />
                                         </div>
                                     ) : (
-                                        <Plus className="w-5 h-5 text-gray-400 shrink-0" />
+                                        <Plus className="w-5 h-5 text-slate-400 shrink-0" />
                                     )}
                                 </button>
 
@@ -83,9 +83,9 @@ export function FAQSection() {
                                             animate={{ height: "auto", opacity: 1 }}
                                             exit={{ height: 0, opacity: 0 }}
                                             transition={{ duration: 0.3, ease: "easeInOut" }}
-                                            className="overflow-hidden bg-[#fafafa] border border-gray-100 border-t-0 rounded-b-[10px]"
+                                            className="overflow-hidden bg-muted border border-border border-t-0 rounded-b-[10px]"
                                         >
-                                            <div className="px-5 py-5 text-[14px] text-gray-600 font-medium leading-relaxed">
+                                            <div className="px-5 py-5 text-[14px] text-slate-600 font-medium leading-relaxed">
                                                 {faq.answer}
                                             </div>
                                         </motion.div>

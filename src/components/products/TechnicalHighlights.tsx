@@ -3,9 +3,11 @@
 import { motion } from "framer-motion";
 import { LucideIcon } from "lucide-react";
 
+import { ReactNode } from "react";
+
 interface Highlight {
     title: string;
-    icon: LucideIcon;
+    icon: ReactNode;
 }
 
 interface TechnicalHighlightsProps {
@@ -14,7 +16,7 @@ interface TechnicalHighlightsProps {
 
 export function TechnicalHighlights({ highlights }: TechnicalHighlightsProps) {
     return (
-        <section className="py-24 md:py-32 bg-white">
+        <section className="py-24 md:py-24 bg-white">
             <div className="max-w-7xl mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -29,7 +31,6 @@ export function TechnicalHighlights({ highlights }: TechnicalHighlightsProps) {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                     {highlights.map((item, index) => {
-                        const Icon = item.icon;
                         return (
                             <motion.div
                                 key={item.title}
@@ -37,10 +38,10 @@ export function TechnicalHighlights({ highlights }: TechnicalHighlightsProps) {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                                className="flex items-start gap-5 p-8 rounded-2xl bg-zinc-50 border border-zinc-100 hover:border-zinc-200 transition-colors group"
+                                className="flex items-start gap-5 p-8 rounded-lg bg-slate-50 border border-border hover:border-slate-300 transition-colors group"
                             >
-                                <div className="w-12 h-12 shrink-0 rounded-xl bg-white border border-zinc-200 flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow">
-                                    <Icon size={24} className="text-zinc-700 group-hover:text-zinc-900 transition-colors" />
+                                <div className="w-12 h-12 shrink-0 rounded bg-white border border-border flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow text-slate-700 group-hover:text-foreground">
+                                    {item.icon}
                                 </div>
                                 <div className="pt-2">
                                     <h3 className="font-semibold text-zinc-900 leading-tight">{item.title}</h3>

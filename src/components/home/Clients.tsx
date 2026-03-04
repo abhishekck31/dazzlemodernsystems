@@ -14,11 +14,11 @@ const dummyClients = [
 
 export function Clients() {
     return (
-        <section className="py-24 bg-[#fafafa] border-y border-gray-100" id="clients">
+        <section className="py-20 md:py-24 bg-muted border-y border-border" id="clients">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
                 <MotionWrapper variants={fadeUp} className="text-center mb-16">
-                    <h2 className="text-[14px] md:text-[15px] font-bold tracking-widest text-gray-500 uppercase">
+                    <h2 className="text-[14px] md:text-[15px] font-bold tracking-widest text-muted-foreground uppercase">
                         Trusted by industry leaders
                     </h2>
                 </MotionWrapper>

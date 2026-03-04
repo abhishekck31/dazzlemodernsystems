@@ -56,22 +56,22 @@ export default function SteelCementitiousPage() {
             {/* 4. Technical Highlights Section */}
             <TechnicalHighlights
                 highlights={[
-                    { title: "Non-Combustible Core", icon: ShieldCheck },
-                    { title: "High Load Bearing Capacity", icon: ArrowUpToLine },
-                    { title: "Precision Manufacturing", icon: Settings },
-                    { title: "Lightweight Construction", icon: Zap },
-                    { title: "Electrostatic Control (HPL/PVC)", icon: Shield },
-                    { title: "Long-Term Durability", icon: Clock },
+                    { title: "Non-Combustible Core", icon: <ShieldCheck size={24} /> },
+                    { title: "High Load Bearing Capacity", icon: <ArrowUpToLine size={24} /> },
+                    { title: "Precision Manufacturing", icon: <Settings size={24} /> },
+                    { title: "Lightweight Construction", icon: <Zap size={24} /> },
+                    { title: "Electrostatic Control (HPL/PVC)", icon: <Shield size={24} /> },
+                    { title: "Long-Term Durability", icon: <Clock size={24} /> },
                 ]}
             />
 
             {/* 5. Applications Section */}
             <ProductApplications
                 applications={[
-                    { title: "Data Centers", icon: Database },
-                    { title: "IT Infrastructure", icon: Server },
-                    { title: "Control Rooms", icon: Monitor },
-                    { title: "Corporate Offices", icon: Building2 },
+                    { title: "Data Centers", icon: <Database size={24} /> },
+                    { title: "IT Infrastructure", icon: <Server size={24} /> },
+                    { title: "Control Rooms", icon: <Monitor size={24} /> },
+                    { title: "Corporate Offices", icon: <Building2 size={24} /> },
                 ]}
             />
 

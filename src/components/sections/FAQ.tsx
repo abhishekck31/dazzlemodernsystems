@@ -33,15 +33,15 @@ export function FAQ() {
     };
 
     return (
-        <section className="py-24 bg-gray-50/50">
+        <section className="py-24 bg-slate-50/50">
             <div className="max-w-4xl mx-auto px-6 lg:px-10">
 
                 <MotionWrapper variants={fadeUp} className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-gray-900 leading-tight">
+                    <h2 className="text-3xl md:text-[40px] font-bold tracking-tight text-foreground leading-tight">
                         Answers to common questions
                     </h2>
-                    <p className="text-gray-500 mt-4 text-lg">
-                        Have a question that isn't answered here? <a href="#contact" className="text-blue-600 font-semibold hover:underline">Contact sales.</a>
+                    <p className="text-muted-foreground mt-4 text-lg">
+                        Have a question that isn't answered here? <a href="#contact" className="text-brand-600 font-semibold hover:underline">Contact sales.</a>
                     </p>
                 </MotionWrapper>
 
@@ -50,16 +50,16 @@ export function FAQ() {
                         <MotionWrapper
                             key={i}
                             variants={fadeUp}
-                            className="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+                            className="bg-white rounded-2xl border border-border overflow-hidden shadow-sm hover:shadow-md transition-shadow"
                         >
                             <button
                                 onClick={() => toggle(i)}
-                                className="w-full text-left px-6 py-6 flex items-center justify-between font-semibold text-lg hover:bg-gray-50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                                className="w-full text-left px-6 py-6 flex items-center justify-between font-semibold text-lg hover:bg-slate-50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                                 aria-expanded={openIndex === i}
                             >
-                                <span className="text-gray-900 pr-4">{faq.question}</span>
+                                <span className="text-foreground pr-4">{faq.question}</span>
                                 <ChevronDown
-                                    className={`w-5 h-5 text-gray-400 shrink-0 transition-transform duration-300 ${openIndex === i ? "rotate-180 text-blue-500" : ""
+                                    className={`w-5 h-5 text-slate-400 shrink-0 transition-transform duration-300 ${openIndex === i ? "rotate-180 text-brand-500" : ""
                                         }`}
                                 />
                             </button>
@@ -73,7 +73,7 @@ export function FAQ() {
                                         transition={{ duration: 0.3, ease: "easeInOut" }}
                                         className="overflow-hidden bg-white"
                                     >
-                                        <div className="px-6 pb-6 text-gray-500 font-medium leading-relaxed">
+                                        <div className="px-6 pb-6 text-muted-foreground font-medium leading-relaxed">
                                             {faq.answer}
                                         </div>
                                     </motion.div>

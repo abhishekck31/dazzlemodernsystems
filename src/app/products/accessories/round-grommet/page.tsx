@@ -20,7 +20,7 @@ export default function RoundGrommetPage() {
             />
 
             {/* Overview Section */}
-            <section className="py-24 md:py-32 bg-white relative overflow-hidden">
+            <section className="py-24 md:py-24 bg-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-zinc-50 rounded-full blur-3xl opacity-50" />
 
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -44,7 +44,7 @@ export default function RoundGrommetPage() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="relative aspect-4/3 rounded-3xl overflow-hidden shadow-2xl bg-zinc-100 group"
+                            className="relative aspect-4/3 rounded-lg overflow-hidden shadow-2xl bg-zinc-100 group"
                         >
                             <div className="absolute inset-0 bg-gradient-to-tr from-black/10 to-transparent z-10" />
                             <div className="w-full h-full bg-zinc-200 flex items-center justify-center">
@@ -59,10 +59,10 @@ export default function RoundGrommetPage() {
             <div className="pb-24">
                 <TechnicalHighlights
                     highlights={[
-                        { title: "Safe cable passage from underfloor cavity", icon: Shield },
-                        { title: "Neat and organized wire management", icon: FastForward },
-                        { title: "Available in PVC finish", icon: LayoutGrid },
-                        { title: "Available in Metal finish", icon: LayoutGrid },
+                        { title: "Safe cable passage from underfloor cavity", icon: <Shield size={24} /> },
+                        { title: "Neat and organized wire management", icon: <FastForward size={24} /> },
+                        { title: "Available in PVC finish", icon: <LayoutGrid size={24} /> },
+                        { title: "Available in Metal finish", icon: <LayoutGrid size={24} /> },
                     ]}
                 />
             </div>
