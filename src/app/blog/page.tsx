@@ -7,43 +7,44 @@ import { ContactCTA } from "@/components/contact/ContactCTA";
 
 const dummyPosts = [
     {
-        id: "building-clarity",
-        title: "Building clarity through better SaaS dashboard design",
+        id: "raised-floor-installation-guide",
+        title: "Beginner's guide to raised access floor installation in commercial spaces",
         date: "Jan 6, 2026",
-        image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop",
+        image: "/blog-raised-floor-install.jpg",
         featured: true
     },
     {
-        id: "saas-onboarding",
-        title: "Designing SaaS onboarding that users actually finish",
+        id: "data-center-flooring",
+        title: "Why raised access flooring is essential for modern data center infrastructure",
         date: "Jan 10, 2026",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
+        image: "/blog-data-center-floor.jpg",
     },
     {
-        id: "smart-automation",
-        title: "How smart automation reduces friction in SaaS products",
+        id: "office-flooring-design",
+        title: "Designing smarter offices: the role of modular raised floor systems",
         date: "Jan 8, 2026",
-        image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=800&auto=format&fit=crop",
+        image: "/blog-office-design.jpg",
     },
     {
-        id: "complex-workflows",
-        title: "Turning complex workflows into simple user experiences",
+        id: "engineering-underfloor",
+        title: "Understanding pedestal and stringer systems in steel cementitious flooring",
         date: "Jan 4, 2026",
-        image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800&auto=format&fit=crop",
+        image: "/blog-engineering-detail.jpg",
     },
     {
-        id: "microinteractions",
-        title: "Using microinteractions to improve SaaS usability",
+        id: "airflow-management",
+        title: "Airflow management through perforated raised floor panels in server environments",
         date: "Jan 2, 2026",
-        image: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=800&auto=format&fit=crop",
+        image: "/blog-airflow-panel.jpg",
     },
     {
-        id: "saas-scalability",
-        title: "Designing SaaS products for long-term scalability",
+        id: "commercial-construction",
+        title: "How raised floor systems accelerate timelines in large commercial construction",
         date: "Jan 1, 2026",
-        image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop",
+        image: "/blog-construction-overview.jpg",
     }
 ];
+
 
 export default function BlogListingPage() {
     return (

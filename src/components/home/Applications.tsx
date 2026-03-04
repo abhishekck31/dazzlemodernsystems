@@ -5,10 +5,26 @@ import { fadeUp, staggerContainer } from "@/lib/animations";
 import Image from "next/image";
 
 const applications = [
-    { title: "Open Office", image: "/app-office.jpg" },
-    { title: "Data Center", image: "/app-datacenter.jpg" },
-    { title: "Control Room", image: "/app-controlroom.jpg" },
-    { title: "Class Room", image: "/app-classroom.jpg" }
+    {
+        title: "Open Office",
+        image: "/app-office.jpg",
+        desc: "Flexible cable access for modern workspace infrastructure."
+    },
+    {
+        title: "Data Center",
+        image: "/app-datacenter.jpg",
+        desc: "Precision airflow and full cable management for critical IT loads."
+    },
+    {
+        title: "Control Room",
+        image: "/app-controlroom.jpg",
+        desc: "Ergonomic layouts with concealed power and signal cabling."
+    },
+    {
+        title: "Class Room",
+        image: "/app-classroom.jpg",
+        desc: "Clean interiors meeting institutional load and fire safety standards."
+    }
 ];
 
 export function Applications() {
@@ -30,25 +46,27 @@ export function Applications() {
                         <MotionWrapper
                             key={i}
                             variants={fadeUp}
-                            className="group relative h-[360px] rounded-lg overflow-hidden bg-slate-100 shadow-md border border-slate-200 hover:shadow-xl transition-all duration-700 hover:-translate-y-1 cursor-pointer"
+                            className="group relative h-[380px] rounded-xl overflow-hidden shadow-md border border-slate-200 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 cursor-pointer"
                         >
-                            <div className="absolute inset-0 z-10 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
+                            {/* Gradient overlay — darkens bottom for legibility */}
+                            <div className="absolute inset-0 z-10 bg-gradient-to-t from-slate-950/85 via-slate-900/30 to-slate-900/10 group-hover:from-slate-950/90 transition-all duration-500" />
 
-                            {/* Placeholder gradient fallback */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-950 z-0" />
-
+                            {/* AI-generated contextual image */}
                             <Image
                                 src={app.image}
                                 alt={app.title}
                                 fill
-                                className="object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-[0.22,1,0.36,1] z-0 mix-blend-overlay"
+                                className="object-cover group-hover:scale-[1.06] transition-transform duration-700 ease-[0.22,1,0.36,1]"
                                 unoptimized
                             />
 
-                            <div className="absolute bottom-6 left-6 right-6 z-20 flex flex-col justify-end">
-                                <h3 className="text-[22px] font-bold text-white tracking-tight leading-[1.2] group-hover:-translate-y-1 transition-transform duration-700">
+                            <div className="absolute bottom-0 left-0 right-0 z-20 p-6 flex flex-col justify-end">
+                                <h3 className="text-[22px] font-bold text-white tracking-tight leading-[1.2] group-hover:-translate-y-1 transition-transform duration-500">
                                     {app.title}
                                 </h3>
+                                <p className="text-[13px] text-white/70 font-medium mt-2 leading-[1.5] max-h-0 overflow-hidden group-hover:max-h-20 transition-all duration-500 ease-[0.22,1,0.36,1]">
+                                    {app.desc}
+                                </p>
                                 <div className="h-[2px] w-8 bg-brand-500 mt-4 scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-700 ease-[0.22,1,0.36,1]" />
                             </div>
                         </MotionWrapper>

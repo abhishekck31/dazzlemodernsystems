@@ -22,8 +22,10 @@ export function BlogCard({ post, isFeatured = false }: BlogCardProps) {
     return (
         <MotionWrapper variants={fadeUp} className="group relative">
             <Link href={`/blog/${post.id}`} className="block">
-                <div className={`relative mb-6 rounded-2xl overflow-hidden bg-slate-100 ${isFeatured ? 'h-[240px] md:h-[300px]' : 'h-[200px] md:h-[220px]'} border border-border shadow-sm transition-all duration-500 group-hover:shadow-lg`}>
-                    <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/0 transition-colors duration-300 z-10" />
+                <div className={`relative mb-6 rounded-xl overflow-hidden ${isFeatured ? 'h-[260px] md:h-[320px]' : 'h-[210px] md:h-[240px]'} border border-border shadow-sm transition-all duration-500 group-hover:shadow-xl`}>
+
+                    {/* Dark gradient on hover for title preview */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent group-hover:from-slate-900/30 transition-colors duration-500 z-10" />
 
                     {post.featured && (
                         <div className="absolute top-4 left-4 z-20 px-3 py-1 bg-[#111] text-white text-[10px] font-bold uppercase tracking-widest rounded-full shadow-md backdrop-blur-md">
@@ -31,15 +33,12 @@ export function BlogCard({ post, isFeatured = false }: BlogCardProps) {
                         </div>
                     )}
 
-                    {/* Placeholder for dynamic CMS images, using next/image fallback pattern */}
-                    <div className="w-full h-full relative" style={{ backgroundImage: `url(${post.image})`, backgroundSize: "cover", backgroundPosition: "center" }} />
-
                     <Image
                         src={post.image}
                         alt={post.title}
                         fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-700 ease-[0.22,1,0.36,1]"
-                        unoptimized // Needed if dummy paths don't exist yet
+                        className="object-cover group-hover:scale-[1.05] transition-transform duration-700 ease-[0.22,1,0.36,1]"
+                        unoptimized
                     />
                 </div>
 

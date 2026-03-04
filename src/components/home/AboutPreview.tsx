@@ -3,6 +3,8 @@
 import { MotionWrapper } from "@/components/ui/MotionWrapper";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 import { Building2, Pickaxe, MapPin } from "lucide-react";
+import Image from "next/image";
+
 
 export function AboutPreview() {
     return (
@@ -24,14 +26,18 @@ export function AboutPreview() {
                         </MotionWrapper>
                     </MotionWrapper>
 
-                    {/* Right: Decorative Image/Graphic Placeholder */}
-                    <MotionWrapper variants={fadeUp} className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-lg border border-border group">
-                        <div className="absolute inset-0 bg-brand-900/10 z-10 mix-blend-multiply transition-colors duration-700 group-hover:bg-brand-900/5" />
-                        <div className="w-full h-full bg-slate-200 relative">
-                            {/* Abstract mockup representing structural layers */}
-                            <div className="absolute inset-0" style={{ backgroundImage: "url('/facility-hero.jpg')", backgroundSize: "cover", backgroundPosition: "center" }} />
-                        </div>
+                    {/* Right: AI-generated facility image */}
+                    <MotionWrapper variants={fadeUp} className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-2xl border border-border group">
+                        <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/20 to-transparent z-10 mix-blend-multiply transition-colors duration-700 group-hover:from-slate-900/10" />
+                        <Image
+                            src="/facility-hero.jpg"
+                            alt="Dazzle Modular Systems manufacturing facility"
+                            fill
+                            className="object-cover group-hover:scale-[1.04] transition-transform duration-700 ease-[0.22,1,0.36,1]"
+                            unoptimized
+                        />
                     </MotionWrapper>
+
 
                 </div>
 

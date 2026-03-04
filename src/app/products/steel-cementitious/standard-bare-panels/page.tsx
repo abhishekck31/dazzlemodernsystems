@@ -46,15 +46,18 @@ export default function StandardBarePanelsPage() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="relative aspect-4/3 rounded-lg overflow-hidden shadow-2xl bg-zinc-100 group"
+                            className="relative aspect-4/3 rounded-xl overflow-hidden shadow-2xl bg-zinc-100 group"
                         >
-                            <div className="absolute inset-0 bg-gradient-to-tr from-black/10 to-transparent z-10" />
-                            {/* Uses a placeholder colored block since we don't have the image file downloaded yet, maintaining aesthetic */}
-                            <div className="w-full h-full bg-zinc-200 flex items-center justify-center">
-                                {/* <Image src="http://dazzletech.in/uploads/products/standard-bare-panels.jpg" alt="Standard Bare Panels" fill className="object-cover group-hover:scale-105 transition-transform duration-700" /> */}
-                                <LayoutGrid size={64} className="text-zinc-300" strokeWidth={1} />
-                            </div>
+                            <div className="absolute inset-0 bg-gradient-to-tr from-black/15 to-transparent z-10 group-hover:from-black/10 transition-colors duration-500" />
+                            <Image
+                                src="/product-bare-panel.jpg"
+                                alt="Standard Bare Panel — Steel Cementitious Raised Access Floor"
+                                fill
+                                className="object-cover group-hover:scale-[1.04] transition-transform duration-700 ease-[0.22,1,0.36,1]"
+                                unoptimized
+                            />
                         </motion.div>
+
                     </div>
                 </div>
             </section>
