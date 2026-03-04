@@ -54,14 +54,14 @@ export default function FAQPage() {
     };
 
     return (
-        <main className="min-h-screen bg-[#fdfdfd] pt-28 pb-0">
+        <main className="min-h-screen bg-background pt-28 pb-0">
             <div className="max-w-[720px] mx-auto px-6 lg:px-10">
 
                 <MotionWrapper variants={fadeUp} className="text-center mb-16">
-                    <span className="inline-block py-1.5 px-4 rounded-full border border-gray-200 text-[11px] font-bold text-gray-500 tracking-widest uppercase mb-6 shadow-sm">
+                    <span className="inline-block py-1.5 px-4 rounded-full border border-border text-[11px] font-bold text-muted-foreground tracking-widest uppercase mb-6 shadow-sm">
                         FAQS
                     </span>
-                    <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 leading-tight">
+                    <h1 className="text-3xl md:text-[40px] font-bold tracking-tight text-foreground leading-tight">
                         Answers to<br className="hidden md:block" /> common questions
                     </h1>
                 </MotionWrapper>
@@ -70,7 +70,7 @@ export default function FAQPage() {
                     {faqData.map((section, sIdx) => (
                         <MotionWrapper key={sIdx} variants={staggerContainer} className="space-y-6">
                             <MotionWrapper variants={fadeUp}>
-                                <h2 className="text-2xl font-bold text-gray-900 text-center mb-6">{section.category}</h2>
+                                <h2 className="text-2xl font-bold text-foreground text-center mb-6">{section.category}</h2>
                             </MotionWrapper>
 
                             <div className="space-y-[10px]">
@@ -82,8 +82,8 @@ export default function FAQPage() {
                                             <button
                                                 onClick={() => toggle(id)}
                                                 className={`w-full text-left px-5 py-4 flex items-center justify-between font-bold text-[14px] md:text-[15px] transition-all duration-300 focus:outline-none ${isOpen
-                                                        ? "bg-[#0a0a0a] text-white rounded-t-[10px] rounded-b-none"
-                                                        : "bg-white text-gray-900 border border-gray-100 rounded-[10px] hover:border-gray-200 shadow-sm hover:shadow-md"
+                                                        ? "bg-slate-900 text-white rounded-t-[10px] rounded-b-none"
+                                                        : "bg-white text-foreground border border-border rounded-[10px] hover:border-border shadow-sm hover:shadow-md"
                                                     }`}
                                             >
                                                 <span className="pr-4 leading-tight">{faq.q}</span>
@@ -93,7 +93,7 @@ export default function FAQPage() {
                                                         <X className="w-3.5 h-3.5 text-white" />
                                                     </div>
                                                 ) : (
-                                                    <Plus className="w-5 h-5 text-gray-400 shrink-0" />
+                                                    <Plus className="w-5 h-5 text-slate-400 shrink-0" />
                                                 )}
                                             </button>
 
@@ -104,9 +104,9 @@ export default function FAQPage() {
                                                         animate={{ height: "auto", opacity: 1 }}
                                                         exit={{ height: 0, opacity: 0 }}
                                                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                                                        className="overflow-hidden bg-[#fafafa] border border-gray-100 border-t-0 rounded-b-[10px]"
+                                                        className="overflow-hidden bg-muted border border-border border-t-0 rounded-b-[10px]"
                                                     >
-                                                        <div className="px-5 py-5 text-[14px] text-gray-600 font-medium leading-relaxed">
+                                                        <div className="px-5 py-5 text-[14px] text-slate-600 font-medium leading-relaxed">
                                                             {faq.a}
                                                         </div>
                                                     </motion.div>
@@ -122,12 +122,12 @@ export default function FAQPage() {
 
                 {/* Still have questions Card */}
                 <MotionWrapper variants={fadeUp} className="mt-20">
-                    <div className="bg-[#fafafa] rounded-3xl border border-gray-200 text-center py-12 px-6 shadow-sm">
-                        <h3 className="text-[18px] font-bold text-gray-900 mb-2">Still have questions?</h3>
-                        <p className="text-[14px] text-gray-500 font-medium mb-6 max-w-[280px] mx-auto">
+                    <div className="bg-muted rounded-lg border border-border text-center py-12 px-6 shadow-sm">
+                        <h3 className="text-[18px] font-bold text-foreground mb-2">Still have questions?</h3>
+                        <p className="text-[16px] text-muted-foreground font-medium mb-6 max-w-[280px] mx-auto">
                             Join the Worklane waitlist and get early access to smarter workflow automation.
                         </p>
-                        <Link href="/contact" className="inline-flex items-center gap-3 px-1.5 py-1.5 pr-5 bg-gray-900 text-white rounded-full font-semibold text-[13px] w-fit hover:bg-gray-800 transition-transform duration-200 hover:-translate-y-1 shadow-md">
+                        <Link href="/contact" className="inline-flex items-center gap-3 px-1.5 py-1.5 pr-5 bg-slate-900 text-white rounded-full font-semibold text-[13px] w-fit hover:bg-slate-800 transition-transform duration-200 hover:-translate-y-1 shadow-md">
                             <div className="w-[28px] h-[28px] bg-white rounded-full flex items-center justify-center shrink-0 shadow-sm">
                                 <ArrowRight className="w-3.5 h-3.5 text-black" />
                             </div>

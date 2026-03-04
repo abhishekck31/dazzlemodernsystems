@@ -47,11 +47,11 @@ const dummyPosts = [
 
 export default function BlogListingPage() {
     return (
-        <main className="min-h-screen bg-[#fdfdfd] pt-32 pb-0">
+        <main className="min-h-screen bg-background pt-32 pb-0">
             <div className="max-w-[1120px] mx-auto px-6 lg:px-10 pb-24">
 
                 <MotionWrapper variants={fadeUp} className="mb-20 text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 leading-tight mb-4">
+                    <h1 className="text-3xl md:text-[40px] font-bold tracking-tight text-foreground leading-tight mb-4">
                         Our Blogs
                     </h1>
                 </MotionWrapper>

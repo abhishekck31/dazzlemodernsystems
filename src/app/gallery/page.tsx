@@ -68,18 +68,18 @@ export default function GalleryPage() {
                 ]}
             />
 
-            <section className="py-24 md:py-32 bg-white relative overflow-hidden">
+            <section className="py-24 md:py-24 bg-white relative overflow-hidden">
                 {/* Background ambient light */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-zinc-50 rounded-[100%] blur-[100px] opacity-70 pointer-events-none" />
 
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
-                    <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
+                    <div className="text-center max-w-[65ch] mx-auto mb-16 md:mb-24">
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
-                            className="text-3xl md:text-5xl font-bold text-zinc-900 mb-6 tracking-tight"
+                            className="text-3xl md:text-[40px] font-bold text-zinc-900 mb-6 tracking-tight"
                         >
                             Our Photo Showcase
                         </motion.h2>
@@ -103,7 +103,7 @@ export default function GalleryPage() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                                className="group relative aspect-[4/3] rounded-3xl overflow-hidden bg-zinc-100 cursor-pointer shadow-sm hover:shadow-2xl transition-all duration-500"
+                                className="group relative aspect-[4/3] rounded-lg overflow-hidden bg-zinc-100 cursor-pointer shadow-sm hover:shadow-2xl transition-all duration-500"
                             >
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img

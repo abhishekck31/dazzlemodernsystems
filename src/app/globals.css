@@ -4,24 +4,24 @@
   --font-sans: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular;
 
-  --color-brand-50: #eff6ff;
-  --color-brand-100: #dbeafe;
-  --color-brand-500: #3b82f6;
-  --color-brand-600: #2563eb;
-  --color-brand-900: #1e3a8a;
+  --color-brand-50: #f1f5f9;
+  --color-brand-100: #e2e8f0;
+  --color-brand-500: #0077b6; /* Subtle Blue Accent */
+  --color-brand-600: #005b8a; /* Deep Blue Accent */
+  --color-brand-900: #0b172a; /* Deep Navy */
   
-  --color-hero-bg: #575757;
-  --color-hero-end: #3b3b3b;
-  --color-automation-start: #0f1016;
-  --color-automation-end: #201335;
+  --color-hero-bg: #0b172a;
+  --color-hero-end: #1e293b;
+  --color-automation-start: #0b172a;
+  --color-automation-end: #0f172a;
   
-  --color-background: #fdfdfd;
-  --color-foreground: #111111;
+  --color-background: #f8fafc; /* Neutral Grey Background */
+  --color-foreground: #0f172a; /* Deep Slate Foreground */
   --color-card: #ffffff;
-  --color-card-foreground: #111111;
-  --color-border: #e4e4e7;
-  --color-muted: #f4f4f5;
-  --color-muted-foreground: #71717a;
+  --color-card-foreground: #0f172a;
+  --color-border: #cbd5e1;
+  --color-muted: #f1f5f9;
+  --color-muted-foreground: #64748b;
 }
 
 @layer base {

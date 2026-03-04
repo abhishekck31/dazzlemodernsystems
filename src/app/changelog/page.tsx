@@ -68,14 +68,14 @@ const changelogData = [
 
 export default function ChangelogPage() {
     return (
-        <main className="min-h-screen bg-[#fdfdfd] pt-24 pb-0">
+        <main className="min-h-screen bg-background pt-24 pb-0">
             <div className="max-w-[720px] mx-auto px-6 lg:px-10 pb-20">
 
                 <MotionWrapper variants={fadeUp} className="mb-20">
-                    <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 leading-tight mb-4">
+                    <h1 className="text-3xl md:text-[40px] font-bold tracking-tight text-foreground leading-tight mb-4">
                         Changelog
                     </h1>
-                    <p className="text-gray-500 text-[15px] font-medium max-w-sm">
+                    <p className="text-muted-foreground text-[15px] font-medium max-w-sm">
                         Explore the latest features, performance updates, and AI enhancements.
                     </p>
                 </MotionWrapper>
@@ -85,16 +85,16 @@ export default function ChangelogPage() {
                         <MotionWrapper key={i} variants={staggerContainer} className="relative">
 
                             {/* Header: Date Badge & Version */}
-                            <MotionWrapper variants={fadeUp} className="mb-8 border-b border-gray-100 pb-6">
-                                <span className="inline-block py-1 px-3 rounded-full border border-gray-200 text-[10px] font-bold text-gray-500 tracking-widest uppercase mb-3 shadow-sm">
+                            <MotionWrapper variants={fadeUp} className="mb-8 border-b border-border pb-6">
+                                <span className="inline-block py-1 px-3 rounded-full border border-border text-[10px] font-bold text-muted-foreground tracking-widest uppercase mb-3 shadow-sm">
                                     • {log.date} •
                                 </span>
-                                <h2 className="text-2xl font-bold tracking-tight text-gray-900">{log.version}</h2>
+                                <h2 className="text-2xl font-bold tracking-tight text-foreground">{log.version}</h2>
                             </MotionWrapper>
 
                             {/* Optional Image */}
                             {log.image && (
-                                <MotionWrapper variants={fadeUp} className="mb-10 w-full h-[320px] rounded-[24px] overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-[#111] shadow-md border border-gray-100">
+                                <MotionWrapper variants={fadeUp} className="mb-10 w-full h-[320px] rounded-lg overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-slate-950 shadow-md border border-border">
                                     {/* Placeholder styling mimicking a graphic */}
                                     <div className="w-full h-full opacity-60 mix-blend-screen" style={{ backgroundImage: "url('/changelog-1.jpg')", backgroundSize: "cover", backgroundPosition: "center" }} />
                                 </MotionWrapper>
@@ -104,15 +104,15 @@ export default function ChangelogPage() {
                             <div className="space-y-10">
                                 {log.sections.map((sec, j) => (
                                     <MotionWrapper key={j} variants={fadeUp}>
-                                        <h3 className="text-[17px] font-bold text-gray-900 mb-4">{sec.title}</h3>
-                                        <ul className="space-y-3 pl-5 list-disc list-outside text-gray-600 text-[14px] font-medium leading-relaxed marker:text-gray-300">
+                                        <h3 className="text-[16px] md:text-[18px] font-bold text-foreground mb-4">{sec.title}</h3>
+                                        <ul className="space-y-3 pl-5 list-disc list-outside text-slate-600 text-[14px] font-medium leading-relaxed marker:text-slate-300">
                                             {sec.items.map((item, k) => {
                                                 const parts = item.split(" – ");
                                                 return (
                                                     <li key={k} className="pl-1">
                                                         {parts.length > 1 ? (
                                                             <>
-                                                                <span className="text-gray-900 font-semibold">{parts[0]}</span>
+                                                                <span className="text-foreground font-semibold">{parts[0]}</span>
                                                                 {" – " + parts.slice(1).join(" – ")}
                                                             </>
                                                         ) : (
