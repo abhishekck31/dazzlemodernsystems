@@ -56,11 +56,11 @@ export default function ApplicationPage() {
                 ]}
             />
 
-            <section className="py-24 md:py-32 bg-zinc-50 relative overflow-hidden">
+            <section className="py-24 md:py-24 bg-zinc-50 relative overflow-hidden">
                 <div className="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-zinc-200/50 rounded-full blur-3xl opacity-50" />
 
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
-                    <div className="text-center max-w-3xl mx-auto mb-20">
+                    <div className="text-center max-w-[65ch] mx-auto mb-20">
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -89,7 +89,7 @@ export default function ApplicationPage() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                                className="bg-white rounded-3xl p-8 shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-zinc-100 flex flex-col group hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300"
+                                className="bg-white rounded-lg p-8 shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-zinc-100 flex flex-col group hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300"
                             >
                                 <div className="w-14 h-14 bg-zinc-50 rounded-2xl flex items-center justify-center mb-8 border border-zinc-100 group-hover:bg-zinc-900 group-hover:text-white transition-colors duration-300">
                                     <app.icon size={24} className="text-zinc-600 group-hover:text-white transition-colors duration-300" />

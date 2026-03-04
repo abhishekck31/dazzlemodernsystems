@@ -19,8 +19,8 @@ export default function ProductsPage() {
                 ]}
             />
 
-            <section className="py-24 md:py-32 bg-zinc-50 border-t border-zinc-200">
-                <div className="max-w-4xl mx-auto px-6 text-center text-xl md:text-2xl text-zinc-600 leading-relaxed md:leading-snug font-light mb-16 md:mb-24">
+            <section className="py-24 md:py-24 bg-zinc-50 border-t border-zinc-200">
+                <div className="max-w-4xl mx-auto px-6 text-center text-[16px] md:text-[18px] text-zinc-600 leading-relaxed md:leading-snug font-light mb-16 md:mb-24">
                     Engineered for mission-critical environments. Discover our high-performance infrastructure solutions built for strength, durability, and precision.
                 </div>
 

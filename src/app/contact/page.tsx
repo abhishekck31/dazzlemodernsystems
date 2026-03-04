@@ -15,7 +15,7 @@ export default function ContactPage() {
                 ]}
             />
 
-            <section className="py-24 md:py-32 bg-white relative overflow-hidden">
+            <section className="py-24 md:py-24 bg-white relative overflow-hidden">
                 {/* Background ambient light */}
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-zinc-50 rounded-l-[100px] opacity-50 pointer-events-none hidden lg:block" />
 
@@ -31,7 +31,7 @@ export default function ContactPage() {
                             className="lg:col-span-4 flex flex-col gap-12"
                         >
                             <div>
-                                <h2 className="text-3xl md:text-5xl font-bold text-zinc-900 mb-6 tracking-tight">
+                                <h2 className="text-3xl md:text-[40px] font-bold text-zinc-900 mb-6 tracking-tight">
                                     Get in Touch.
                                 </h2>
                                 <p className="text-lg text-zinc-600 font-light leading-relaxed">
