@@ -1,25 +1,26 @@
 const fs = require('fs');
+const path = require('path');
 
-const tp = 'src/app/products/steel-cementitious/page.tsx';
-if (fs.existsSync(tp)) {
-    let cnt = fs.readFileSync(tp, 'utf8');
-    cnt = cnt.replace(/\{ title: "([^"]+)", icon: ([\w]+) \}/g, '{ title: "$1", icon: <$2 size={24} /> }');
-    fs.writeFileSync(tp, cnt, 'utf8');
-    console.log('Fixed steel page');
+function processFiles(dir) {
+    const files = fs.readdirSync(dir);
+    for (const file of files) {
+        let fullPath = path.join(dir, file);
+        if (fs.statSync(fullPath).isDirectory()) {
+            processFiles(fullPath);
+        } else if (fullPath.endsWith('.tsx') || fullPath.endsWith('.ts')) {
+            let content = fs.readFileSync(fullPath, 'utf8');
+            let originalContent = content;
+
+            // Fix icon passing to Client Components error
+            // Matches: { title: "Some Title", icon: SomeIcon }
+            content = content.replace(/\{\s*title:\s*"([^"]+)",\s*icon:\s*([A-Za-z0-9_]+)\s*\}/g, '{ title: "$1", icon: <$2 size={24} /> }');
+
+            if (content !== originalContent) {
+                fs.writeFileSync(fullPath, content, 'utf8');
+                console.log('Fixed icons in: ' + fullPath);
+            }
+        }
+    }
 }
 
-const wc = 'src/app/products/wood-core/page.tsx';
-if (fs.existsSync(wc)) {
-    let wcnt = fs.readFileSync(wc, 'utf8');
-    wcnt = wcnt.replace(/\{ title: "([^"]+)", icon: ([\w]+) \}/g, '{ title: "$1", icon: <$2 size={24} /> }');
-    fs.writeFileSync(wc, wcnt, 'utf8');
-    console.log('Fixed wood-core page');
-}
-
-const pp = 'src/app/products/page.tsx';
-if (fs.existsSync(pp)) {
-    let pcnt = fs.readFileSync(pp, 'utf8');
-    pcnt = pcnt.replace(/\{ title: "([^"]+)", icon: ([\w]+) \}/g, '{ title: "$1", icon: <$2 size={24} /> }');
-    fs.writeFileSync(pp, pcnt, 'utf8');
-    console.log('Fixed products page');
-}
+processFiles(path.join(__dirname, 'src', 'app', 'products'));

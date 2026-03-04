@@ -20,7 +20,7 @@ export default function BareEncapsulatedPanelsPage() {
             />
 
             {/* Overview Section */}
-            <section className="py-24 md:py-32 bg-white relative overflow-hidden">
+            <section className="py-24 md:py-24 bg-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-zinc-50 rounded-full blur-3xl opacity-50" />
 
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -44,7 +44,7 @@ export default function BareEncapsulatedPanelsPage() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="relative aspect-4/3 rounded-3xl overflow-hidden shadow-2xl bg-zinc-100 group"
+                            className="relative aspect-4/3 rounded-lg overflow-hidden shadow-2xl bg-zinc-100 group"
                         >
                             <div className="absolute inset-0 bg-gradient-to-tr from-black/10 to-transparent z-10" />
                             <div className="w-full h-full bg-zinc-200 flex items-center justify-center">
@@ -58,17 +58,17 @@ export default function BareEncapsulatedPanelsPage() {
             {/* Features Highlight */}
             <TechnicalHighlights
                 highlights={[
-                    { title: "No added urea formaldehyde wood available", icon: ShieldCheck },
-                    { title: "High strength to weight performance", icon: ArrowUpToLine },
-                    { title: "Full range of factory laminated finishes", icon: Settings },
-                    { title: "Finishes available with Integral Trim® edge", icon: CheckCircle2 },
-                    { title: "Internally grounded", icon: Zap },
-                    { title: "Wide range of understructure support systems", icon: Shield },
+                    { title: "No added urea formaldehyde wood available", icon: <ShieldCheck size={24} /> },
+                    { title: "High strength to weight performance", icon: <ArrowUpToLine size={24} /> },
+                    { title: "Full range of factory laminated finishes", icon: <Settings size={24} /> },
+                    { title: "Finishes available with Integral Trim® edge", icon: <CheckCircle2 size={24} /> },
+                    { title: "Internally grounded", icon: <Zap size={24} /> },
+                    { title: "Wide range of understructure support systems", icon: <Shield size={24} /> },
                 ]}
             />
 
             {/* Specifications Details Section */}
-            <section className="py-24 md:py-32 bg-zinc-50 border-y border-zinc-200">
+            <section className="py-24 md:py-24 bg-zinc-50 border-y border-zinc-200">
                 <div className="max-w-7xl mx-auto px-6">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -94,7 +94,7 @@ export default function BareEncapsulatedPanelsPage() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.1 }}
-                            className="lg:col-span-4 flex flex-col gap-8 bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-zinc-100"
+                            className="lg:col-span-4 flex flex-col gap-8 bg-white p-8 md:p-10 rounded-lg shadow-sm border border-zinc-100"
                         >
                             <h3 className="text-xl font-bold text-zinc-900 border-b border-zinc-100 pb-4">Standard Info</h3>
                             <ul className="flex flex-col gap-6">
@@ -119,7 +119,7 @@ export default function BareEncapsulatedPanelsPage() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.2 }}
-                            className="lg:col-span-8 bg-white rounded-3xl shadow-sm border border-zinc-100 overflow-hidden"
+                            className="lg:col-span-8 bg-white rounded-lg shadow-sm border border-zinc-100 overflow-hidden"
                         >
                             <div className="overflow-x-auto">
                                 <table className="w-full text-left border-collapse min-w-[600px]">

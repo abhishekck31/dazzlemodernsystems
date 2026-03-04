@@ -59,12 +59,12 @@ export default function BrushGrommetPage() {
             <div className="pb-24">
                 <TechnicalHighlights
                     highlights={[
-                        { title: "Reliable sealing against dust", icon: ShieldCheck },
-                        { title: "Prevention of system failures due to overheating", icon: ThermometerSnowflake },
-                        { title: "Complete system with easy installation", icon: Settings },
-                        { title: "Can be installed before or after laying of cables", icon: Layers },
-                        { title: "Air is prevented from escaping", icon: Wind },
-                        { title: "Cooling units run at lower capacity, saving money", icon: Zap },
+                        { title: "Reliable sealing against dust", icon: <ShieldCheck size={24} /> },
+                        { title: "Prevention of system failures due to overheating", icon: <ThermometerSnowflake size={24} /> },
+                        { title: "Complete system with easy installation", icon: <Settings size={24} /> },
+                        { title: "Can be installed before or after laying of cables", icon: <Layers size={24} /> },
+                        { title: "Air is prevented from escaping", icon: <Wind size={24} /> },
+                        { title: "Cooling units run at lower capacity, saving money", icon: <Zap size={24} /> },
                     ]}
                 />
             </div>

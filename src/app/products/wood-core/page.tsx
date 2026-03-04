@@ -22,14 +22,14 @@ export default function WoodCorePage() {
             />
 
             {/* 2. Product Category Introduction */}
-            <section className="py-24 md:py-32 bg-white">
-                <div className="max-w-4xl mx-auto px-6 text-center text-xl md:text-2xl text-zinc-600 leading-relaxed md:leading-snug font-light">
+            <section className="py-24 md:py-24 bg-white">
+                <div className="max-w-4xl mx-auto px-6 text-center text-[16px] md:text-[18px] text-zinc-600 leading-relaxed md:leading-snug font-light">
                     Wood Core panels consist of high density composite wood glued to and encased in hot dipped galvanized formed steel sheets. These panels provide excellent rigidity, durability, and acoustic performance for demanding environments.
                 </div>
             </section>
 
             {/* 3. Product Cards Section */}
-            <section className="py-24 md:py-32 bg-zinc-50 border-t border-zinc-200 relative">
+            <section className="py-24 md:py-24 bg-zinc-50 border-t border-zinc-200 relative">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-stretch">
                         <ProductCard
@@ -53,22 +53,22 @@ export default function WoodCorePage() {
             {/* 4. Technical Highlights Section */}
             <TechnicalHighlights
                 highlights={[
-                    { title: "High Strength to Weight", icon: ArrowUpToLine },
-                    { title: "Acoustic Performance", icon: ShieldCheck },
-                    { title: "Precision Manufacturing", icon: Settings },
-                    { title: "No added urea formaldehyde", icon: Zap },
-                    { title: "Internally Grounded", icon: Shield },
-                    { title: "Long-Term Durability", icon: Clock },
+                    { title: "High Strength to Weight", icon: <ArrowUpToLine size={24} /> },
+                    { title: "Acoustic Performance", icon: <ShieldCheck size={24} /> },
+                    { title: "Precision Manufacturing", icon: <Settings size={24} /> },
+                    { title: "No added urea formaldehyde", icon: <Zap size={24} /> },
+                    { title: "Internally Grounded", icon: <Shield size={24} /> },
+                    { title: "Long-Term Durability", icon: <Clock size={24} /> },
                 ]}
             />
 
             {/* 5. Applications Section */}
             <ProductApplications
                 applications={[
-                    { title: "General Offices", icon: Building2 },
-                    { title: "Call Centers", icon: Server },
-                    { title: "Libraries", icon: Monitor },
-                    { title: "Computer Rooms", icon: Database },
+                    { title: "General Offices", icon: <Building2 size={24} /> },
+                    { title: "Call Centers", icon: <Server size={24} /> },
+                    { title: "Libraries", icon: <Monitor size={24} /> },
+                    { title: "Computer Rooms", icon: <Database size={24} /> },
                 ]}
             />
 
